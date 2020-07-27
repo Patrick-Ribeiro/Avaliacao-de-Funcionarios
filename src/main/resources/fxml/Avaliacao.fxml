@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="avaliacao.controller.AvaliacaoController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="34.0" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="285.0" styleClass="painel" stylesheets="@../styles/Styles.css" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <ImageView fx:id="imgViewFoto" fitHeight="211.0" fitWidth="246.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" smooth="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label fx:id="lblNome" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="247.0" text="NOME FUNCIONARIO" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="Impact" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnVoltar" layoutX="1079.0" layoutY="688.0" mnemonicParsing="false" onAction="#voltar" styleClass="button-classic" text="VOLTAR" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="170.0">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font></Button>
+      <Button fx:id="btnEnviar" alignment="CENTER" contentDisplay="CENTER" layoutX="1206.0" layoutY="688.0" mnemonicParsing="false" onAction="#enviarVoto" styleClass="button-classic" text="ENVIAR" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font></Button>
+      <AnchorPane prefHeight="287.0" prefWidth="1266.0" styleClass="painel" stylesheets="@../styles/Styles.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="350.0">
+         <children>
+            <TextArea fx:id="textAreaObservacoes" cacheShape="false" focusTraversable="false" onKeyPressed="#verificarTecla" prefHeight="243.0" prefWidth="1240.0" scaleShape="false" style="-fx-background-color: transparent;" stylesheets="@../styles/Styles.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="409.0" layoutY="28.0" text="DEIXE AQUI SUA OPINIÃO" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane alignment="CENTER" layoutX="359.0" layoutY="32.0" prefHeight="211.0" prefWidth="966.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="REGULAR" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Label text="ÓTIMO" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Label text="BOM" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Label text="RUIM" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="PÉSSIMO" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Impact" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPessimo" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#setAvaliacaoPessimo" style="-fx-background-radius: 100; -fx-background-color: transparent;" styleClass="button-votacao" stylesheets="@../styles/Styles.css" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgPessimo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/icons/button-pessimo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnRuim" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#setAvaliacaoRuim" style="-fx-background-color: transparent;" stylesheets="@../styles/Styles.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgRuim" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/icons/button-ruim.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnRegular" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#setAvaliacaoRegular" style="-fx-background-color: transparent;" stylesheets="@../styles/Styles.css" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgRegular" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/icons/button-regular.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBom" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#setAvaliacaoBom" style="-fx-background-color: transparent;" stylesheets="@../styles/Styles.css" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgBom" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/icons/button-bom.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnOtimo" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#setAvaliacaoOtimo" style="-fx-background-color: transparent;" stylesheets="@../styles/Styles.css" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fx:id="imgOtimo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/icons/button-otimo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
